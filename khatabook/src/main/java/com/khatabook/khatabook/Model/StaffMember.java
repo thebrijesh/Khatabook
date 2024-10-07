@@ -16,7 +16,7 @@ public class StaffMember extends BaseModel {
 
     String name;
     String mobile;
-    List<Permission> permissionList;
+    List<MemberPermission> permissionList;
     int presentDays;
     int paidLeave;
     int halfDay;
