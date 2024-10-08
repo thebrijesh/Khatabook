@@ -22,4 +22,6 @@ public class Party extends BaseModel{
     Date dueDate;
     @OneToMany
     List<PartyTransaction> transactionList;
+    @ManyToOne
+    Business business;
 }
