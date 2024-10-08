@@ -22,9 +22,14 @@ public class BusinessController {
            return new ResponseEntity<>(businessList, HttpStatus.OK);
     }
     @PostMapping("/businesses")
-    public ResponseEntity<Business> getAllBusiness(@RequestBody Business business){
+    public ResponseEntity<Business> createBusiness(@RequestBody Business business){
         Business saveBusiness = businessService.createBusiness(business);
         return new ResponseEntity<>(saveBusiness, HttpStatus.CREATED);
+    }
+    @DeleteMapping("/businesses/{id}")
+    public ResponseEntity<Void> deleteBusiness(@PathVariable("id") Long businessId){
+         businessService.deleteBusiness(businessId);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }
