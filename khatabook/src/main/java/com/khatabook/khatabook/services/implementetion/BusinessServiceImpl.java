@@ -1,7 +1,7 @@
 package com.khatabook.khatabook.services.implementetion;
 
 import com.khatabook.khatabook.Model.Business;
-import com.khatabook.khatabook.repository.interfaces.BusinessRepository;
+import com.khatabook.khatabook.repository.BusinessRepository;
 import com.khatabook.khatabook.services.interfaces.BusinessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

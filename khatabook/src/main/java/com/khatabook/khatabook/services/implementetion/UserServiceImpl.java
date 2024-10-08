@@ -1,7 +1,7 @@
 package com.khatabook.khatabook.services.implementetion;
 
 import com.khatabook.khatabook.Model.User;
-import com.khatabook.khatabook.repository.interfaces.UserRepository;
+import com.khatabook.khatabook.repository.UserRepository;
 import com.khatabook.khatabook.services.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.khatabook.khatabook.repository.interfaces;
+package com.khatabook.khatabook.repository;
 
 import com.khatabook.khatabook.Model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
