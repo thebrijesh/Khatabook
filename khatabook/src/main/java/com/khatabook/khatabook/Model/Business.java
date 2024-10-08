@@ -15,7 +15,7 @@ public class Business extends BaseModel {
     String name;
     String mobile;
     String address;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.MERGE)
     private User user;
     @OneToMany
     List<StaffMember> staffList;
