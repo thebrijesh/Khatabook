@@ -1,4 +1,4 @@
-package com.khatabook.khatabook.repository.interfaces;
+package com.khatabook.khatabook.repository;
 
 import com.khatabook.khatabook.Model.BillProduct;
 import com.khatabook.khatabook.Model.Business;

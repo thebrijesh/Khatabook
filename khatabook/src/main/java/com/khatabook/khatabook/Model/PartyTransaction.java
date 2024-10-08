@@ -11,7 +11,7 @@ import java.util.Date;
 @Getter
 @Setter
 public class PartyTransaction  extends BaseModel{
-    @OneToOne
+    @OneToOne(cascade = CascadeType.MERGE)
     Party party;
     double amount;
     Date date;
