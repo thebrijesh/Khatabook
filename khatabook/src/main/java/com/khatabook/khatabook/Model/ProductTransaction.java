@@ -2,12 +2,9 @@ package com.khatabook.khatabook.Model;
 
 
 
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.Setter;
 
-import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,4 +21,6 @@ public class ProductTransaction extends BaseModel{
     double amount;
     int unit;
     String description;
+    @ManyToOne
+    BillProduct billProduct;
 }

@@ -16,6 +16,5 @@ public class BillService extends BaseModel {
     double salePrice;
     int monthlySales;
     int totalSales;
-    @OneToMany
-    List<ServiceTransaction> productTransactions;
+
 }

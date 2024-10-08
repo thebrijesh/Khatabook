@@ -1,8 +1,7 @@
 package com.khatabook.khatabook.Model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.catalina.Service;
@@ -16,11 +15,13 @@ public class Business extends BaseModel {
     String name;
     String mobile;
     String address;
+    @ManyToOne
+    private User user;
     @OneToMany
     List<StaffMember> staffList;
     @OneToMany
     List<Party> parties;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     List<Bill> bills;
     @OneToMany
     List<Expanses> expansesList;

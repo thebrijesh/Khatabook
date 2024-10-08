@@ -1,10 +1,7 @@
 package com.khatabook.khatabook.Model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,6 +21,6 @@ public class BillProduct extends BaseModel {
 
     @Enumerated(EnumType.ORDINAL)
     UnitType unitType;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     List<ProductTransaction> productTransactions;
 }

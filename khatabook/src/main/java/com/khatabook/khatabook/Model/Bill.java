@@ -13,11 +13,13 @@ import java.util.List;
 @Getter
 @Setter
 public class Bill extends BaseModel{
-    @OneToOne
+    @ManyToOne
     Party party;
-    @OneToMany
+    @ManyToOne
+    Business business;
+    @ManyToMany
     List<BillProduct> products;
-    @OneToMany
+    @ManyToMany
     List<BillService> services;
     double amount;
     Date date;

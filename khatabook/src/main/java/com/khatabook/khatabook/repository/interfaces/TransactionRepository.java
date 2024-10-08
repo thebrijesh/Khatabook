@@ -1,7 +1,10 @@
 package com.khatabook.khatabook.repository.interfaces;
 
+import com.khatabook.khatabook.Model.Business;
+import com.khatabook.khatabook.Model.PartyTransaction;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TransactionRepository {
+public interface TransactionRepository extends JpaRepository<PartyTransaction,Long> {
 }

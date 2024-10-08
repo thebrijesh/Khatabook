@@ -2,6 +2,7 @@ package com.khatabook.khatabook.Model;
 
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,4 +19,6 @@ public class ServiceTransaction extends BaseModel {
     double amount;
     int unit;
     String description;
+    @ManyToOne
+    BillService billService;
 }
