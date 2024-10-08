@@ -2,6 +2,8 @@ package com.khatabook.khatabook.Model;
 
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,7 +17,9 @@ public class Expanses extends BaseModel{
 
     String name;
     Date date;
+    @OneToOne
     ExpansesCategory expansesCatrgory;
     double amount;
+    @OneToMany
     List<ExpansesItem> expansesItems;
 }

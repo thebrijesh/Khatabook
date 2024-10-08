@@ -2,6 +2,7 @@ package com.khatabook.khatabook.Model;
 
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,5 +18,6 @@ public class User extends BaseModel {
      String email;
      String password;
 
+     @OneToMany
      List<Business> businessList;
 }
