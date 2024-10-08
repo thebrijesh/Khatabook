@@ -21,6 +21,7 @@ public class PartyController {
         return new ResponseEntity<>(createdParty, HttpStatus.OK);
     }
 
+    @GetMapping("/{businessId}")
     public ResponseEntity< List<Party>> getAllParty(@PathVariable("businessId") Long businessId){
         List<Party> createdPartyList = partyService.getAllParty(businessId);
         return new ResponseEntity<>(createdPartyList, HttpStatus.OK);
