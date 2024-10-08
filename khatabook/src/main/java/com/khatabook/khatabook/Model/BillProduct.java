@@ -16,7 +16,7 @@ public class BillProduct extends BaseModel {
     double salePrice;
     double purchasePrice;
 
-    int stockQuontity;
+    int stockQuantity;
     int lowStock;
 
     @Enumerated(EnumType.ORDINAL)

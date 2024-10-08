@@ -1,7 +1,7 @@
 package com.khatabook.khatabook.services.implementetion;
 
 import com.khatabook.khatabook.Model.Party;
-import com.khatabook.khatabook.repository.interfaces.PartyRepository;
+import com.khatabook.khatabook.repository.PartyRepository;
 import com.khatabook.khatabook.services.interfaces.PartyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

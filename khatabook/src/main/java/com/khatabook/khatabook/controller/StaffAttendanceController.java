@@ -3,5 +3,5 @@ package com.khatabook.khatabook.controller;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class StaffAttendenseController {
+public class StaffAttendanceController {
 }
