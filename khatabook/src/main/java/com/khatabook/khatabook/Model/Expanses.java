@@ -1,9 +1,7 @@
 package com.khatabook.khatabook.Model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,8 +16,10 @@ public class Expanses extends BaseModel{
     String name;
     Date date;
     @OneToOne
-    ExpansesCategory expansesCatrgory;
+    ExpansesCategory expansesCategory;
     double amount;
     @OneToMany
     List<ExpansesItem> expansesItems;
+    @ManyToOne(cascade = CascadeType.MERGE)
+    Business business;
 }

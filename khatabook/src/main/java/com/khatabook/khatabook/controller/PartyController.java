@@ -18,7 +18,7 @@ public class PartyController {
     @PostMapping("/creteParty")
     public ResponseEntity<Party> createParty(@RequestBody Party party){
         Party createdParty = partyService.createParty(party);
-        return new ResponseEntity<>(createdParty, HttpStatus.OK);
+        return new ResponseEntity<>(createdParty, HttpStatus.CREATED);
     }
 
     @GetMapping("/{businessId}")
