@@ -16,9 +16,10 @@ public class BillProduct extends BaseModel {
     double salePrice;
     double purchasePrice;
 
-    int stockQuontity;
+    int stockQuantity;
     int lowStock;
-
+    @ManyToOne(cascade = CascadeType.MERGE)
+    Business business;
     @Enumerated(EnumType.ORDINAL)
     UnitType unitType;
     @OneToMany(cascade = CascadeType.ALL)

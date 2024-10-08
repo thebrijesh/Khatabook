@@ -22,6 +22,6 @@ public class Party extends BaseModel{
     Date dueDate;
     @OneToMany
     List<PartyTransaction> transactionList;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.MERGE)
     Business business;
 }
