@@ -1,8 +1,6 @@
 package com.khatabook.khatabook.controller;
 
-import com.khatabook.khatabook.Model.Bill;
 import com.khatabook.khatabook.Model.PartyTransaction;
-import com.khatabook.khatabook.services.interfaces.BillService;
 import com.khatabook.khatabook.services.interfaces.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

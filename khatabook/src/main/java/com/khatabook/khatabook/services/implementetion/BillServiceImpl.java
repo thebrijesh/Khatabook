@@ -2,16 +2,14 @@ package com.khatabook.khatabook.services.implementetion;
 
 import com.khatabook.khatabook.Model.Bill;
 import com.khatabook.khatabook.repository.BillRepository;
-import com.khatabook.khatabook.services.interfaces.BillService;
+import com.khatabook.khatabook.services.interfaces.MyBillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
-public class BillServiceImpl implements BillService {
+public class BillServiceImpl implements MyBillService {
 
     @Autowired
     BillRepository billRepository;
