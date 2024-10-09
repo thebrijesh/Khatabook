@@ -12,7 +12,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/staffAttendance")
-public class StaffAttendanceController {
+public class
+StaffAttendanceController {
     @Autowired
     StaffAttendanceService staffAttendanceService;
 

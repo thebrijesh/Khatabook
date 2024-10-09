@@ -1,10 +1,9 @@
 package com.khatabook.khatabook.controller;
 
 import com.khatabook.khatabook.Model.Bill;
-import com.khatabook.khatabook.services.interfaces.BillService;
+import com.khatabook.khatabook.services.interfaces.MyBillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +14,7 @@ import java.util.List;
 public class BillController {
 
     @Autowired
-    BillService billService;
+    MyBillService billService;
 
     @GetMapping("/{businessId}")
     public ResponseEntity<List<Bill>> getAllBills(@PathVariable() Long businessId) {

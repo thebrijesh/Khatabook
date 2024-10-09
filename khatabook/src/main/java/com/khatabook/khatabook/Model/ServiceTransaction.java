@@ -1,6 +1,7 @@
 package com.khatabook.khatabook.Model;
 
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
