@@ -20,8 +20,7 @@ public class Party extends BaseModel{
     @Enumerated(EnumType.ORDINAL)
     PartyType partyType;
     Date dueDate;
-    @OneToMany
-    List<PartyTransaction> transactionList;
+
     @ManyToOne(cascade = CascadeType.MERGE)
     Business business;
 }
