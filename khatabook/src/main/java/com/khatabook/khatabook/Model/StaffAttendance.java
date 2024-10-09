@@ -1,10 +1,7 @@
 package com.khatabook.khatabook.Model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,7 +11,7 @@ import java.util.Date;
 @Getter
 @Setter
 public class StaffAttendance extends BaseModel {
-    @OneToOne
+    @ManyToOne
     StaffMember staffMember;
     @Enumerated(EnumType.ORDINAL)
     StaffAttendanceType type;

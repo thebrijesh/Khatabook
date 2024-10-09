@@ -4,6 +4,10 @@ import com.khatabook.khatabook.Model.StaffAttendance;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
-public interface StaffAttendenseRepository extends JpaRepository<StaffAttendance,Long> {
+public interface StaffAttendanceRepository extends JpaRepository<StaffAttendance,Long> {
+
+    List<StaffAttendance> findAllStaffAttendanceByStaffMemberId(Long staffId);
 }
