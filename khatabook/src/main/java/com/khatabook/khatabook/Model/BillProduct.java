@@ -1,6 +1,7 @@
 package com.khatabook.khatabook.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,5 +24,6 @@ public class BillProduct extends BaseModel {
     @Enumerated(EnumType.ORDINAL)
     UnitType unitType;
     @OneToMany(cascade = CascadeType.ALL)
+            @JsonIgnore
     List<ProductTransaction> productTransactions;
 }

@@ -2,10 +2,7 @@ package com.khatabook.khatabook.Model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,6 +17,9 @@ public class BillService extends BaseModel {
     int monthlySales;
     int totalSales;
     @ManyToOne(cascade = CascadeType.MERGE)
-            @JsonIgnore
     Business business;
+    @OneToMany(cascade = CascadeType.ALL)
+    @JsonIgnore
+    List<ServiceTransaction> serviceTransactions;
+
 }
