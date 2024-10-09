@@ -1,6 +1,7 @@
 package com.khatabook.khatabook.Model;
 
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
@@ -16,5 +17,6 @@ public class BillService extends BaseModel {
     double salePrice;
     int monthlySales;
     int totalSales;
-
+    @OneToMany(cascade = CascadeType.MERGE)
+    List<ServiceTransaction> serviceTransactionList;
 }
