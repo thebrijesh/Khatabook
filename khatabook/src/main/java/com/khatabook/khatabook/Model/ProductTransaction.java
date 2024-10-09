@@ -21,6 +21,6 @@ public class ProductTransaction extends BaseModel{
     double amount;
     int unit;
     String description;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.MERGE)
     BillProduct billProduct;
 }
