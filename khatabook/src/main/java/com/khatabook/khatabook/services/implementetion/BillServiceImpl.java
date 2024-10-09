@@ -1,7 +1,9 @@
 package com.khatabook.khatabook.services.implementetion;
 
 import com.khatabook.khatabook.Model.Bill;
+import com.khatabook.khatabook.Model.Business;
 import com.khatabook.khatabook.repository.BillRepository;
+import com.khatabook.khatabook.repository.BusinessRepository;
 import com.khatabook.khatabook.services.interfaces.BillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +17,8 @@ public class BillServiceImpl implements BillService {
 
     @Autowired
     BillRepository billRepository;
+    @Autowired
+    BusinessRepository businessRepository;
     @Override
     public List<Bill> getAllBills(Long businessId) {
         return billRepository.findAllBillByBusinessId(businessId);
@@ -22,7 +26,14 @@ public class BillServiceImpl implements BillService {
 
     @Override
     public Bill createBill(Bill bill) {
-        return billRepository.save(bill);
+        Optional<Business> businessOptional = businessRepository.findById(bill.getBusiness().getId());
+        if(businessOptional.isEmpty()) throw new RuntimeException("Business not found");
+        Business business = businessOptional.get();
+
+        Bill savedBill = billRepository.save(bill);
+        business.getBills().add(savedBill);
+        businessRepository.save(business);
+        return savedBill;
     }
 
     @Override

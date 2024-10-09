@@ -18,14 +18,14 @@ public class TransactionController {
     TransactionService transactionService;
 
     @GetMapping("/{partyId}")
-    public ResponseEntity<List<PartyTransaction>> getAllBills(@PathVariable("partyId") Long partyId) {
+    public ResponseEntity<List<PartyTransaction>> getAllTransaction(@PathVariable("partyId") Long partyId) {
         List<PartyTransaction> partyTransactions = transactionService.getAllTransaction(partyId);
         return new ResponseEntity<>(partyTransactions, HttpStatus.OK);
     }
 
     @PostMapping("/create")
-    public ResponseEntity<PartyTransaction> createBill(@RequestBody PartyTransaction partyTransaction) {
-        PartyTransaction savesPartyTransaction = transactionService.createBill(partyTransaction);
+    public ResponseEntity<PartyTransaction> createTransaction(@RequestBody PartyTransaction partyTransaction) {
+        PartyTransaction savesPartyTransaction = transactionService.createTransaction(partyTransaction);
         return new ResponseEntity<>(savesPartyTransaction, HttpStatus.CREATED);
     }
 }

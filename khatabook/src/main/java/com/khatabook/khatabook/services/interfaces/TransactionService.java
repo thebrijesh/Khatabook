@@ -8,5 +8,5 @@ import java.util.List;
 public interface TransactionService {
 
     List<PartyTransaction> getAllTransaction(Long partyId);
-    PartyTransaction createBill(PartyTransaction partyTransaction);
+    PartyTransaction createTransaction(PartyTransaction partyTransaction);
 }

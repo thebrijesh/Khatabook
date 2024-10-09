@@ -15,7 +15,7 @@ import java.util.List;
 public class Bill extends BaseModel{
     @ManyToOne
     Party party;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     Business business;
     @ManyToMany
     List<BillProduct> products;

@@ -1,11 +1,13 @@
 package com.khatabook.khatabook.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.catalina.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -18,16 +20,21 @@ public class Business extends BaseModel {
     @ManyToOne(cascade = CascadeType.MERGE)
     private User user;
     @OneToMany(cascade = CascadeType.MERGE)
+    @JsonIgnore
     List<StaffMember> staffList;
     @OneToMany
     List<Party> parties;
-    @OneToMany(cascade = CascadeType.ALL)
-    List<Bill> bills;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.MERGE)
+    @JsonIgnore
+    List<Bill> bills = new ArrayList<>();
+    @OneToMany(cascade = CascadeType.MERGE)
+    @JsonIgnore
     List<Expanses> expansesList;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.MERGE)
+    @JsonIgnore
     List<BillProduct> products;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.MERGE)
+    @JsonIgnore
     List<BillService> services;
 
     double totalCredit;
