@@ -40,3 +40,4 @@ public class Business extends BaseModel {
     double totalCredit;
     double totalDebit;
 }
+
