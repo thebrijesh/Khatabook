@@ -25,6 +25,7 @@ public class Bill extends BaseModel{
     PaymentType paymentType;
     @Enumerated(EnumType.ORDINAL)
     BillType billType;
+
     HashMap<BillProduct,Integer> products = new HashMap<>();
     HashMap<BillService,Integer> services = new HashMap<>();
 }
